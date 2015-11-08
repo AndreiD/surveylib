@@ -9,8 +9,10 @@ A simple to use, survey library for collecting feedback from your users.
 
 ### Instalation:
 
-Until I figure out this jcenter() stuff, you'll have to do it manually.
-**Fork this project**
+~~~~
+compile 'com.androidadvance.surveylib:surveylib:0.0.1'
+~~~~
+
 
 ### How to use it:
 
