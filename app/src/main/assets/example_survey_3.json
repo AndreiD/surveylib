@@ -1,0 +1,52 @@
+{
+  "survey_properties": {
+    "intro_message": "<strong>Your feedback helps us to build a better mobile product.</strong>",
+    "end_message": "Thank you for having the time to take our survey.",
+    "skip_intro": false
+  },
+  "questions": [
+    {
+      "question_type": "Radioboxes",
+      "question_title": "How appreciated did your supervisor make you feel?",
+      "description": "",
+      "required": true,
+      "random_choices": false,
+      "choices": [
+        "Very appreciated",
+        "Moderately appreciated",
+        "Not at all appreciated"
+      ]
+    },
+    {
+      "question_type": "Radioboxes",
+      "question_title": "How easy was it to get along with the other colleagues at this organization?",
+      "description": "",
+      "required": true,
+      "random_choices": true,
+      "choices": [
+        "<font color='#880000'>Very hard</font>",
+        "<font color='#008800'>Very easy</font>",
+        "<font color='#000088'>So and so :)</font>"
+      ]
+    },
+    {
+      "question_type": "String",
+      "question_title": "You have some suggestions for improvement ?",
+      "description": "",
+      "required": true
+    },
+    {
+      "question_title": "How much you spend per coffee every day ?",
+      "description": "",
+      "required": false,
+      "question_type": "Number"
+    },
+    {
+      "question_type": "StringMultiline",
+      "question_title": "Do you have any other comments you'd like us to know ?",
+      "description": "Requests, problems etc.",
+      "required": false,
+      "number_of_lines": 4
+    }
+  ]
+}

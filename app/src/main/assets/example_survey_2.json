@@ -1,0 +1,70 @@
+{
+  "survey_properties": {
+    "intro_message": "None...It will be skipped!",
+    "end_message": "Thank you for having the time to take our survey.",
+    "skip_intro": true
+  },
+  "questions": [
+    {
+      "question_type": "Radioboxes",
+      "question_title": "What is your age group ?",
+      "description": "",
+      "required": true,
+      "random_choices": false,
+      "choices": [
+        "less than 20",
+        "20-30",
+        "30-40",
+        "40-50",
+        "50+"
+      ]
+    },
+    {
+      "question_type": "Radioboxes",
+      "question_title": "GENDER ?",
+      "description": "",
+      "required": true,
+      "random_choices": true,
+      "choices": [
+        "male",
+        "female"
+      ]
+    },
+    {
+      "question_type": "Checkboxes",
+      "question_title": "With what technologies you work ?",
+      "description": "",
+      "required": false,
+      "random_choices": true,
+      "choices": [
+        "Java",
+        "C++",
+        "PHP",
+        "Javascript",
+        "C#",
+        "SQL",
+        "Python",
+        "Node.js"
+      ]
+    },
+    {
+      "question_type": "String",
+      "question_title": "What is your desktop operating system ?",
+      "description": "",
+      "required": true
+    },
+    {
+      "question_title": "How much are you paid ?",
+      "description": "[per year]",
+      "required": true,
+      "question_type": "Number"
+    },
+    {
+      "question_type": "StringMultiline",
+      "question_title": "Why do you like your job as a developer ?",
+      "description": "",
+      "required": false,
+      "number_of_lines": 2
+    }
+  ]
+}
