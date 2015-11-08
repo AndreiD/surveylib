@@ -4,7 +4,7 @@ Android Survey
 A simple to use, survey library for collecting feedback from your users.
 
 
-![alt text](https://github.com/AndreiD/android_survey/raw/master/app/surveygif.gif "Android Survey Gif")
+![alt text](https://github.com/AndreiD/surveylib/raw/master/app/surveygif.gif "Android Survey Gif")
 
 
 ### Instalation:
@@ -15,13 +15,13 @@ Until it gets approved by jcenter(), you'll have to do it manually.
 
 ### How to use it:
 
-1. Take a look at the [example project](https://github.com/AndreiD/android_survey/blob/master/app/src/main/java/androidadvance/com/androidsurveyexample/MainActivity.java)
+1. Take a look at the [example project](https://github.com/AndreiD/surveylib/blob/master/app/src/main/java/androidadvance/com/androidsurveyexample/MainActivity.java)
 
 
 ##### Step 1:
 
 You will need:
-A json file with the questions. Check the [assets folder](https://github.com/AndreiD/android_survey/tree/master/app/src/main/assets) to see 3 examples.
+A json file with the questions. Check the [assets folder](https://github.com/AndreiD/surveylib/tree/master/app/src/main/assets) to see 3 examples.
 
 
 ##### Step 2:
@@ -38,7 +38,7 @@ Call the class **SurveyActivity** and pass as an extra the json string.
         });
 ~~~~
 
-If you prefer to use it from the assets folder (instead of, for example, your server) you can use [this function.](https://github.com/AndreiD/android_survey/blob/master/app/src/main/java/androidadvance/com/androidsurveyexample/MainActivity.java#L77)
+If you prefer to use it from the assets folder (instead of, for example, your server) you can use [this function.](https://github.com/AndreiD/surveylib/blob/master/app/src/main/java/androidadvance/com/androidsurveyexample/MainActivity.java#L77)
 
 
 ##### Step 3:
@@ -75,7 +75,7 @@ Use html codes in your json question title, choices. You can see a [compiled lis
 
 Define your material design colors in the style. 
 
-Not enough ? You have to do it yourself. Simplest way is to [Fork this project](https://github.com/AndreiD/android_survey#fork-destination-box) and style, add, modify who you like.
+Not enough ? You have to do it yourself. Simplest way is to [Fork this project](https://github.com/AndreiD/surveylib#fork-destination-box) and style, add, modify who you like.
 
 ###### More question types
 
@@ -84,7 +84,7 @@ Not enough ? You have to do it yourself. Simplest way is to [Fork this project](
 #### Troubleshooting 
 
 1. Make sure you have the ***latest*** shit. At this moment: compileSdkVersion 23, targetSdkVersion 23, buildToolsVersion "23.0.1", compile 'com.android.support:appcompat-v7:23.1.0',   compile 'com.android.support:design:23.1.0' etc.
-2. Feed a valid json! Otherwhise you'll get errors.
+2. Feed a valid json! Otherwise you'll get errors.
 3. Check the sample project.
 
 #### Updates, Questions, and Requests
