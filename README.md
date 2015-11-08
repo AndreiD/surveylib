@@ -9,9 +9,8 @@ A simple to use, survey library for collecting feedback from your users.
 
 ### Instalation:
 
-Until it gets approved by jcenter(), you'll have to do it manually.
-[Fork this project](https://github.com/AndreiD/surveylib#fork-destination-box)
-
+Until I figure out this jcenter() stuff, you'll have to do it manually.
+**Fork this project**
 
 ### How to use it:
 
@@ -77,9 +76,9 @@ Define your material design colors in the style.
 
 Not enough ? You have to do it yourself. Simplest way is to [Fork this project](https://github.com/AndreiD/surveylib#fork-destination-box) and style, add, modify who you like.
 
-###### More question types
+###### More question types / Other Stuff
 
-[Fork this project](https://github.com/AndreiD/surveylib#fork-destination-box)
+Fork this project
 
 #### Troubleshooting 
 
