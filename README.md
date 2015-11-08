@@ -27,6 +27,7 @@ A json file with the questions. Check the [assets folder](https://github.com/And
 
 Call the class **SurveyActivity** and pass as an extra the json string.
 ~~~~
+        private static final int SURVEY_REQUEST = 1337;
         a_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -37,7 +38,9 @@ Call the class **SurveyActivity** and pass as an extra the json string.
         });
 ~~~~
 
-If you prefer to use it from the assets folder (instead of, for example, your server) you can use [this function.](https://github.com/AndreiD/surveylib/blob/master/app/src/main/java/androidadvance/com/androidsurveyexample/MainActivity.java#L77)
+
+
+What is loadSurveyJson ? check [this function.](https://github.com/AndreiD/surveylib/blob/master/app/src/main/java/androidadvance/com/androidsurveyexample/MainActivity.java#L77)
 
 
 ##### Step 3:
@@ -61,6 +64,14 @@ The activity is started with a request code.
     }
 ~~~~
 
+##### Last step:
+
+Add this activity to your manifest file.
+~~~~
+<activity android:name="com.androidadvance.androidsurvey.SurveyActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:windowSoftInputMode="stateHidden"/>
+~~~~
 
 ##### The Json format of the Questions.
 
