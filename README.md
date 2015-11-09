@@ -106,6 +106,9 @@ Ping me here :)
 
 #### TODO://
 
+* Offline mode storage.
+* Sync with server example.
+* Adding a sliding bar / stars question type
 * Waiting for your suggestions
 
 
