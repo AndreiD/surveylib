@@ -3,7 +3,7 @@ Android Survey
 
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Android%20Survey-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/2780)
 
-A simple to use, survey library for collecting feedback from your users.
+## A simple to use, survey library for collecting feedback from your users.
 
 
 ![alt text](https://github.com/AndreiD/surveylib/raw/master/app/surveygif.gif "Android Survey Gif")
