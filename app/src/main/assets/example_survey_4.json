@@ -1,0 +1,62 @@
+{
+  "survey_properties": {
+    "intro_message": "<strong>Your feedback helps us to build a better mobile product.</strong><br><br><br>   Hello, Feedback from our clients, friends and family is how we make key decisions on what the future holds for XYZ App.<br><br>By combining data and previous feedback we have introduced many new features e.g. x, y, z.<br><br>It will take less than 2 minutes to answer the feedback quiz.",
+    "end_message": "Thank you for having the time to take our survey.",
+    "skip_intro": false
+  },
+  "questions": [
+    {
+      "question_type": "Radioboxes",
+      "question_title": "I am satisfied with this product.",
+      "description": "",
+      "required": true,
+      "random_choices": false,
+      "choices": [
+        "Strongly disagree",
+        "Somewhat disagree",
+        "Somewhat agree",
+        "Neither agree nor disagree",
+        "Strongly agree"
+      ]
+    },
+    {
+      "question_type": "Radioboxes",
+      "question_title": "How easy was the exam?",
+      "description": "",
+      "required": true,
+      "random_choices": false,
+      "choices": [
+        "<font color='#76FF03'>Very easy</font>",
+        "<font color='#00C853'>Easy</font>",
+        "<font color='#FFEB3B'>Normal</font>",
+        "<font color='#E57373'>Hard</font>",
+        "<font color='#F44336'>Very hard</font>"
+      ]
+    },
+    {
+      "question_type": "Radioboxes",
+      "question_title": "Who will win the Champions League?",
+      "description": "",
+      "required": true,
+      "random_choices": false,
+      "choices": [
+        "Fc Barcelona",
+        "Bayern München",
+        "Real Madrid",
+        "Other football club"
+      ]
+    },
+    {
+      "question_type": "Radioboxes",
+      "question_title": "Which do you prefer?",
+      "description": "",
+      "required": true,
+      "random_choices": true,
+      "choices": [
+        "<font color='#E040FB'>Dogs</font>",
+        "<font color='#00BCD4'>Cats</font>",
+        "<font color='#FFC107'>Rabits</font>"
+      ]
+    }
+  ]
+}
