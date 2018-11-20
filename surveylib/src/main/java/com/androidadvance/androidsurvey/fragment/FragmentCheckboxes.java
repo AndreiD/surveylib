@@ -29,6 +29,7 @@ public class FragmentCheckboxes extends Fragment {
     private FragmentActivity mContext;
     private Button button_continue;
     private TextView textview_q_title;
+    private TextView textview_q_description;
     private LinearLayout linearLayout_checkboxes;
     private final ArrayList<CheckBox> allCb = new ArrayList<>();
 
@@ -40,6 +41,7 @@ public class FragmentCheckboxes extends Fragment {
 
         button_continue = (Button) rootView.findViewById(R.id.button_continue);
         textview_q_title = (TextView) rootView.findViewById(R.id.textview_q_title);
+        textview_q_description = (TextView) rootView.findViewById(R.id.textview_q_description);
         linearLayout_checkboxes = (LinearLayout) rootView.findViewById(R.id.linearLayout_checkboxes);
         button_continue.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,6 +90,7 @@ public class FragmentCheckboxes extends Fragment {
         q_data = (Question) getArguments().getSerializable("data");
 
         textview_q_title.setText(q_data != null ? q_data.getQuestionTitle() : "");
+        textview_q_description.setText(q_data != null ? q_data.getDescription() : "");
 
         if (q_data.getRequired()) {
             button_continue.setVisibility(View.GONE);

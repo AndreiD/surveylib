@@ -33,7 +33,8 @@ public class SurveyActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_survey);
 
-
+        //Reset obtained answer data
+        Answers.getInstance().reset();
 
         if (getIntent().getExtras() != null) {
             Bundle bundle = getIntent().getExtras();

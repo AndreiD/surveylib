@@ -39,4 +39,12 @@ public class Answers {
         }
         return uniqueInstance;
     }
+
+    /** Call this so that the HashMap with the answers can reset completely.
+     * By calling this you only get returned the answer json from one survey
+     * and not all the surveys together in one set.
+     **/
+    public void reset() {
+        uniqueInstance = new Answers();
+    }
 }

@@ -1,15 +1,18 @@
 package com.androidadvance.androidsurvey.fragment;
 
 import android.app.Service;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.text.Editable;
 import android.text.Html;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,12 +23,15 @@ import com.androidadvance.androidsurvey.R;
 import com.androidadvance.androidsurvey.SurveyActivity;
 import com.androidadvance.androidsurvey.models.Question;
 
+import static android.content.ContentValues.TAG;
+
 public class FragmentTextSimple extends Fragment {
 
     private FragmentActivity mContext;
     private Button button_continue;
     private TextView textview_q_title;
     private EditText editText_answer;
+    private boolean isViewShown = false;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -79,10 +85,21 @@ public class FragmentTextSimple extends Fragment {
         }
 
         textview_q_title.setText(Html.fromHtml(q_data.getQuestionTitle()));
-        editText_answer.requestFocus();
-        InputMethodManager imm = (InputMethodManager) mContext.getSystemService(Service.INPUT_METHOD_SERVICE);
-        imm.showSoftInput(editText_answer, 0);
 
+    }
 
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+
+        if (getView() != null) {
+            isViewShown = true;
+            // fetchdata() contains logic to show data when page is selected mostly asynctask to fill the data
+            editText_answer.requestFocus();
+            InputMethodManager imm = (InputMethodManager) mContext.getSystemService(Service.INPUT_METHOD_SERVICE);
+            imm.showSoftInput(editText_answer, 0);
+        } else {
+            isViewShown = false;
+        }
     }
 }
