@@ -8,6 +8,7 @@ import android.text.Editable;
 import android.text.Html;
 import android.text.InputType;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +21,8 @@ import com.androidadvance.androidsurvey.Answers;
 import com.androidadvance.androidsurvey.R;
 import com.androidadvance.androidsurvey.SurveyActivity;
 import com.androidadvance.androidsurvey.models.Question;
+
+import static android.content.ContentValues.TAG;
 
 public class FragmentNumber extends Fragment {
 
@@ -79,10 +82,21 @@ public class FragmentNumber extends Fragment {
 
 
         textview_q_title.setText(Html.fromHtml(q_data.getQuestionTitle()));
-        editText_answer.requestFocus();
-        InputMethodManager imm = (InputMethodManager) mContext.getSystemService(Service.INPUT_METHOD_SERVICE);
-        imm.showSoftInput(editText_answer, 0);
 
+    }
 
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+
+        if (isVisibleToUser) {
+            try{
+                editText_answer.requestFocus();
+                InputMethodManager imm = (InputMethodManager) mContext.getSystemService(Service.INPUT_METHOD_SERVICE);
+                imm.showSoftInput(editText_answer, 0);
+            }catch (Exception e){
+                Log.e(TAG, "setUserVisibleHint: ", e);
+            }
+        }
     }
 }

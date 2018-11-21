@@ -92,14 +92,14 @@ public class FragmentTextSimple extends Fragment {
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);
 
-        if (getView() != null) {
-            isViewShown = true;
-            // fetchdata() contains logic to show data when page is selected mostly asynctask to fill the data
-            editText_answer.requestFocus();
-            InputMethodManager imm = (InputMethodManager) mContext.getSystemService(Service.INPUT_METHOD_SERVICE);
-            imm.showSoftInput(editText_answer, 0);
-        } else {
-            isViewShown = false;
+        if (isVisibleToUser) {
+            try{
+                editText_answer.requestFocus();
+                InputMethodManager imm = (InputMethodManager) mContext.getSystemService(Service.INPUT_METHOD_SERVICE);
+                imm.showSoftInput(editText_answer, 0);
+            }catch (Exception e){
+                Log.e(TAG, "setUserVisibleHint: ", e);
+            }
         }
     }
 }

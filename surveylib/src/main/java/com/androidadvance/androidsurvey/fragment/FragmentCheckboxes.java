@@ -1,13 +1,16 @@
 package com.androidadvance.androidsurvey.fragment;
 
+import android.app.Service;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.text.Html;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -23,6 +26,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import javax.security.auth.login.LoginException;
+
+import static android.content.ContentValues.TAG;
+
 public class FragmentCheckboxes extends Fragment {
 
     private Question q_data;
@@ -32,6 +39,7 @@ public class FragmentCheckboxes extends Fragment {
     private TextView textview_q_description;
     private LinearLayout linearLayout_checkboxes;
     private final ArrayList<CheckBox> allCb = new ArrayList<>();
+    private boolean isViewShown = false;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -118,6 +126,20 @@ public class FragmentCheckboxes extends Fragment {
             });
         }
 
+    }
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+
+        if (isVisibleToUser) {
+            try{
+                InputMethodManager imm = (InputMethodManager) mContext.getSystemService(Service.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(getView().getWindowToken(), 0);
+            }catch (Exception e){
+                Log.e(TAG, "setUserVisibleHint: ", e);
+            }
+        }
     }
 
 
