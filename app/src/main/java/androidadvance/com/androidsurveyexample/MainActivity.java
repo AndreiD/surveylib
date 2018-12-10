@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
 import com.androidadvance.androidsurvey.SurveyActivity;
 import java.io.IOException;
 import java.io.InputStream;
@@ -13,6 +15,7 @@ import java.io.InputStream;
 public class MainActivity extends AppCompatActivity {
 
     private static final int SURVEY_REQUEST = 1337;
+    TextView debugText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         Button button_survey_example_1 = (Button) findViewById(R.id.button_survey_example_1);
         Button button_survey_example_2 = (Button) findViewById(R.id.button_survey_example_2);
         Button button_survey_example_3 = (Button) findViewById(R.id.button_survey_example_3);
+        debugText = (TextView) findViewById(R.id.debugText);
 
         button_survey_example_1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,6 +72,8 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("****", "*****************************************************");
 
                 //do whatever you want with them...
+                debugText.setText("");
+                debugText.setText(answers_json);
             }
         }
     }
