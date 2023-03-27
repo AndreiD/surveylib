@@ -6,6 +6,12 @@
   },
   "questions": [
     {
+      "question_type": "String",
+      "question_title": "Whyyyyyyyyy ?",
+      "description": "",
+      "required": false
+    },
+    {
       "question_type": "Checkboxes",
       "question_title": "What were you hoping the XYZ mobile app would do?",
       "description": "(Select all that apply)",

@@ -1,13 +1,16 @@
 package com.androidadvance.androidsurvey.fragment;
 
+import android.app.Service;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.text.Html;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.LinearLayout;
@@ -23,6 +26,8 @@ import com.androidadvance.androidsurvey.models.Question;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
+import static android.content.ContentValues.TAG;
 
 public class FragmentRadioboxes extends Fragment {
 
@@ -123,6 +128,20 @@ public class FragmentRadioboxes extends Fragment {
         }
 
 
+    }
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+
+        if (isVisibleToUser) {
+            try{
+                InputMethodManager imm = (InputMethodManager) mContext.getSystemService(Service.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(getView().getWindowToken(), 0);
+            }catch (Exception e){
+                Log.e(TAG, "setUserVisibleHint: ", e);
+            }
+        }
     }
 
 
